@@ -1,0 +1,18 @@
+{
+    "properties": {
+        "name": "Baz Graph",
+        "environment": {
+            "type": "noflo-browser"
+        }
+    },
+    "inports": {},
+    "outports": {},
+    "groups": [],
+    "processes": {
+        "ajax/Get_mcqs8": {
+            "component": "ajax/Get",
+            "metadata": {}
+        }
+    },
+    "connections": []
+}
