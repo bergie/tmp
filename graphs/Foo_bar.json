@@ -1,0 +1,103 @@
+{
+    "properties": {
+        "name": "Foo bar",
+        "environment": {
+            "runtime": "noflo-browser",
+            "type": "noflo-browser"
+        }
+    },
+    "inports": {},
+    "outports": {},
+    "groups": [],
+    "processes": {
+        "dom/GetElement_5jum": {
+            "component": "dom/GetElement",
+            "metadata": {
+                "label": "dom/GetElement",
+                "x": 144,
+                "y": 144,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "dom/WriteHtml_onrpl": {
+            "component": "dom/WriteHtml",
+            "metadata": {
+                "label": "dom/WriteHtml",
+                "x": 252,
+                "y": 36,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "prompts/Prompt_1ox75": {
+            "component": "prompts/Prompt",
+            "metadata": {
+                "label": "prompts/Prompt",
+                "x": 144,
+                "y": 36,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "core/Repeat_b2hq1": {
+            "component": "core/Repeat",
+            "metadata": {
+                "label": "core/Repeat",
+                "x": 36,
+                "y": 144,
+                "width": 72,
+                "height": 72
+            }
+        }
+    },
+    "connections": [
+        {
+            "src": {
+                "process": "dom/GetElement_5jum",
+                "port": "element"
+            },
+            "tgt": {
+                "process": "dom/WriteHtml_onrpl",
+                "port": "container"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "prompts/Prompt_1ox75",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "dom/WriteHtml_onrpl",
+                "port": "html"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "core/Repeat_b2hq1",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "dom/GetElement_5jum",
+                "port": "selector"
+            },
+            "metadata": {}
+        },
+        {
+            "data": "What is your name?",
+            "tgt": {
+                "process": "prompts/Prompt_1ox75",
+                "port": "in"
+            }
+        },
+        {
+            "data": "body",
+            "tgt": {
+                "process": "core/Repeat_b2hq1",
+                "port": "in"
+            }
+        }
+    ]
+}
