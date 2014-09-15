@@ -1,0 +1,30 @@
+{
+    "properties": {
+        "name": "Foo",
+        "environment": {}
+    },
+    "inports": {},
+    "outports": {},
+    "groups": [],
+    "processes": {
+        "Show": {
+            "component": "core/Output",
+            "metadata": {
+                "x": 36,
+                "y": 36,
+                "width": 72,
+                "height": 72,
+                "label": "Show"
+            }
+        }
+    },
+    "connections": [
+        {
+            "data": "Hello World!",
+            "tgt": {
+                "process": "Show",
+                "port": "in"
+            }
+        }
+    ]
+}
