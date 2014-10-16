@@ -3,8 +3,10 @@
         "name": "Bar_Project",
         "environment": {
             "runtime": "noflo-browser",
-            "type": "noflo-browser"
-        }
+            "type": "noflo-browser",
+            "content": "<h1>Hello world!</h1>"
+        },
+        "icon": ""
     },
     "inports": {},
     "outports": {
